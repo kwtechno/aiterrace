@@ -1,0 +1,26 @@
+header {
+  background-color: var(--color2);
+};
+.bgc-1 {
+  background-color: #01261F;
+  background-image: url(top.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.midasi {
+  color: #6594e0;
+  border-bottom: dashed 2px #6594e0;
+}
+.midasi>span{
+  color: var(--olange);
+}
+body {
+  background-image: url(backgroundimage.png);
+  background-repeat: repeat;
+}
+.farstmidasi {
+  background-image: url(midasiimage.png);
+  background-repeat: repeat;
+  border-radius: 60px 60px 60px 60px;
+  border: dashed 2px #D9D4CD;
+}

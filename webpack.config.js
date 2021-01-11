@@ -1,4 +1,5 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 module.exports = {
   mode: "production",
   module: {
@@ -11,13 +12,31 @@ module.exports = {
             loader: "css-loader",
             options: { url: false },
           },
+          {
+            loader: "postcss-loader",
+            options: {
+              // PostCSS側でもソースマップを有効にする
+              // sourceMap: true,
+              postcssOptions: {
+                plugins: [
+                  // Autoprefixerを有効化
+                  // ベンダープレフィックスを自動付与する
+                  ["autoprefixer",
+                    {
+                      grid: true
+                    }
+                  ],
+                ],
+              },
+            },
+          },
         ],
       },
     ],
   },
   performance: {
-    maxEntrypointSize: 500000,
-    maxAssetSize: 500000,
+    maxEntrypointSize: 50000000000,
+    maxAssetSize: 50000000000,
   },
   output: {
     filename: 'bundle.js',
