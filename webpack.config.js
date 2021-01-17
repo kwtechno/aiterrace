@@ -1,5 +1,5 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
+const { webpack } = require('webpack');
 module.exports = {
   mode: "production",
   module: {
